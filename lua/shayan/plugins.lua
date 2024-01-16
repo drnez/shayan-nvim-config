@@ -30,7 +30,11 @@ local plugins = {
     {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
     -- end LSP Zero
-    'FotiadisM/tabset.nvim'
+    'FotiadisM/tabset.nvim',
+    {'folke/trouble.nvim', dependencies = {
+        'nvim-tree/nvim-web-devicons'
+        }
+    }
 }
 
 local opts = {}
