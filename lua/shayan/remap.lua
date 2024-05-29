@@ -1,4 +1,6 @@
 vim.g.mapleader = " "
+
+vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("n", "<leader>gb", vim.cmd.Ex)
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

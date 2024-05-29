@@ -34,7 +34,23 @@ local plugins = {
     {'folke/trouble.nvim', dependencies = {
         'nvim-tree/nvim-web-devicons'
         }
-    }
+    },
+    {
+        "vhyrro/luarocks.nvim",
+        priority = 1000,
+        config = true,
+    },
+    {
+        "nvim-neorg/neorg",
+        dependencies = { "luarocks.nvim" },
+        lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+        version = "*", -- Pin Neorg to the latest stable release
+        config = true,
+    },
+    {
+        'vimwiki/vimwiki'
+    },
+    {'akinsho/git-conflict.nvim', version = "*", config = true}
 }
 
 local opts = {}
