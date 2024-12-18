@@ -50,7 +50,8 @@ local plugins = {
     {
         'vimwiki/vimwiki'
     },
-    {'akinsho/git-conflict.nvim', version = "*", config = true}
+    {'akinsho/git-conflict.nvim', version = "*", config = true},
+    {'wakatime/vim-wakatime', lazy = false},
 }
 
 local opts = {}
