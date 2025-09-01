@@ -11,3 +11,5 @@ vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.breakindent = true
 vim.opt.linebreak = true
+
+vim.opt.mouse= ""

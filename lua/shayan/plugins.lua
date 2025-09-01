@@ -16,10 +16,10 @@ local plugins = {
     	'nvim-telescope/telescope.nvim', tag = '0.1.5',
       	dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    'navarasu/onedark.nvim',
+    {'navarasu/onedark.nvim'},
     {
-	'nvim-treesitter/nvim-treesitter',
-	build = ":TSUpdate"
+        'nvim-treesitter/nvim-treesitter',
+        build = ":TSUpdate",
     },
     -- LSP Zero
     {'williamboman/mason.nvim'},
@@ -47,11 +47,19 @@ local plugins = {
         version = "*", -- Pin Neorg to the latest stable release
         config = true,
     },
-    {
-        'vimwiki/vimwiki'
-    },
+    {'vimwiki/vimwiki'},
     {'akinsho/git-conflict.nvim', version = "*", config = true},
-    {'wakatime/vim-wakatime', lazy = false},
+    -- {'wakatime/vim-wakatime', lazy = false},
+    {
+      "lervag/vimtex",
+      lazy = false,     -- we don't want to lazy load VimTeX
+      -- tag = "v2.15", -- uncomment to pin to a specific release
+      init = function()
+        -- VimTeX configuration goes here, e.g.
+        vim.g.vimtex_view_method = "zathura"
+      end
+    },
+    { 'm4xshen/autoclose.nvim' },
 }
 
 local opts = {}
